@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackEd</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png"
+        href="https://static.vecteezy.com/system/resources/thumbnails/005/601/782/small_2x/world-education-logo-design-vector.jpg">
+
+    <!-- Tailwind + Flowbite -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center   ">
+                <img src="https://static.vecteezy.com/system/resources/previews/050/738/813/non_2x/education-logo-design-with-book-globe-badge-with-leaves-icon-mascot-logo-design-symbol-for-language-school-vector.jpg" class="h-8 mr-3" alt="Logo" />
+                <span class="text-xl font-semibold dark:text-white">TrackEd</span>
+            </a>
+
+            
+        </div>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <aside id="logo-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700 transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar">
+        <div class="h-full px-3 pb-4 overflow-y-auto">
+            <ul class="space-y-2 font-medium">
+                <li><a href="#dashboard"
+                        class="flex items-center p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
+                        Dashboard</a></li>
+                <li><a href="#courses"
+                        class="flex items-center p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
+                        Courses</a>
+                </li>
+                <li><a href="#progress"
+                        class="flex items-center p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
+                        Progress </a>
+                </li>
+                <li><a href="#report"
+                        class="flex items-center p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
+                        Reports</a></li>
+                
+                        <li><div class="flex items-center space-x-3">
+                <!-- Language Dropdown -->
+                <button type="button" data-dropdown-toggle="language-dropdown"
+                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                    🌐 English (US)
+                </button>
+                <div id="language-dropdown"
+                    class="z-50 hidden my-2 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700">
+                    <ul class="py-2" role="menu">
+                        <li><a href="#"
+                                class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-300"
+                                role="menuitem">English (US)</a></li>
+                        <li><a href="#"
+                                class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-300"
+                                role="menuitem">Deutsch</a></li>
+                        <li><a href="#"
+                                class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-300"
+                                role="menuitem">Italiano</a></li>
+                        <li><a href="#"
+                                class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-300"
+                                role="menuitem">中文 (繁體)</a></li>
+                    </ul>
+                </div>
+            </div></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="p-6 sm:ml-64 mt-20">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <h1 class="text-3xl font-bold mb-4">STAY ON TRACK, EVERY DAY</h1>
+                <p class="text-gray-700 dark:text-gray-300">
+                    TrackEd is the best ⏱️ time tracking app for students. It's a study tracker powered by a beautiful
+                    📊 dashboard, a timer with 🍅 Pomodoro functionality, and best-in-class 🎮 gamification — so you'll
+                    stay 🚀 motivated to study!
+                </p>
+                <br>
+                <div class="grid grid-flow-col grid-rows-2 gap-4 ">
+                    <div class="flex items-center gap-2"><i class="fas fa-trophy   "></i>Motivating</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-stopwatch "></i>Timer</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-chart-line "></i>Statistics</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-cloud "></i>Cloud powered</div>
+
+
+
+                </div>
+                <br><br>
+                <button
+                    class="hover:shadow-[0_0_30px_rgba(37,99,235,0.7)] rounded-full w-64 h-10 bg-black text-white text-xl text-center font-bold transition-transform duration-300 ease-in-out hover:scale-105">Start
+                    Now</button>
+            </div>
+            <div>
+                <img class=" w-full h-auto rounded-lg  hover:shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+                    src="https://athenify.io/_nuxt/img/hero-min.482f8eb.png" alt="Dashboard Preview">
+            </div>
+        </section>
+    </main>
+
+
+    <!-- image -->
+
+    <section class="p-6 sm:ml-64 mt-20" id="dashboard">
+        <img class="w-cover h-auto rounded-lg  hover:shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+            src="https://athenify.io/_nuxt/img/explainer-min.54b6e2d.png" alt="">
+    </section>
+
+
+
+
+    <!-- descriptiom -->
+    <section class="p-6 sm:ml-64 mt-20 flex justify-center">
+        <div class="max-w-4xl text-center">
+            <h2 class="text-2xl font-bold mb-6">What is TrackEd ?</h2>
+
+            <div class="flex items-center gap-6 mb-6">
+                <img class="transition-transform duration-300 ease-in-out hover:scale-105"
+                    src="https://athenify.io/_nuxt/img/explainer1.5765470.png" width="200" alt="">
+                <p class="text-left text-justify">
+                    TrackEd is the <span class="font-bold">app for tracking study time</span> whether you’re in <br>
+                    college, university, or school. It allows quick <span class="font-bold">time tracking for
+                        students</span> <br>
+                    (plus pupils and even parents!) and enables real <span class="font-bold">learning <br>
+                        tracking</span> to hold you accountable!
+                </p>
+            </div>
+
+            <div class="flex items-center gap-6 mb-6">
+                <p class="text-left text-justify">
+                    In other words, TrackEd is a <span class="font-bold">study time tracker</span> that supports you
+                    <br>
+                    daily with <span class="font-bold">study time management</span>. It’s one of the best time <br>
+                    management apps for university students — a study time counter <br>
+                    with a <span class="font-bold">focus timer</span> in Pomodoro style!
+                </p>
+                <img class="transition-transform duration-300 ease-in-out hover:scale-105"
+                    src="https://athenify.io/_nuxt/img/explainer2.9d0e6a9.png" width="200" alt="">
+            </div>
+
+            <div class="flex items-center gap-6 mb-6">
+                <img class="transition-transform duration-300 ease-in-out hover:scale-105"
+                    src="https://athenify.io/_nuxt/img/explainer3.6cab81f.png" width="200" alt="">
+                <p class="text-left text-justify ">
+                    It's a study tracker tool designed to help you accurately track learning <br>
+                    progress. TrackEd utilizes innovative motivation tools such <br>
+                    as <span class="font-bold">📈 Share Price, 🏆 Medal Standings, and 🔥 Streak.</span>
+                </p>
+            </div>
+            <br><br>
+            <div id="ror" style="height: 400px;"
+                class="w-100 border border-grey rounded-lg transition-all duration-500 ease-in-out hover:scale-105   flex justify-center gap-6 mb-6 rounded-lg p-4">
+
+                <img src="https://athenify.io/_nuxt/img/welcome.fd31e09.png" width="200px" alt="">
+
+                <div class="mt-10">
+                    <h4 class="text-xl font-semibold mb-4">So what makes TrackEd special?</h4>
+
+                    <ul class="text-left text-justify space-y-3">
+                        <li><i class="fas fa-check-circle fa-lg"></i>📊 Beautiful dashboard: View all your study metrics in one place</li>
+                        <li><i class="fas fa-check-circle fa-lg"></i>☁️ Cloud-based: Access your data anywhere, on any device</li>
+                        <li><i class="fas fa-check-circle fa-lg"></i>🤩 Easy to use: Simple, intuitive interface for effortless tracking</li>
+                    </ul>
+
+                    <button
+                        class="mt-6 hover:shadow-[0_0_30px_rgba(37,99,235,0.7)] rounded-full w-64 h-10 bg-black text-white text-xl font-bold transition-transform duration-300 ease-in-out hover:scale-105">
+                        Get Started Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   <!-- Courses Section -->
+<section class="p-6 sm:ml-64 mt-20 flex justify-center" id="courses">
+  <section class="my-10 px-6 w-full">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center"> Available Courses</h2>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Course 1 -->
+      <div id="ror" class="bg-white  rounded-lg transition-all duration-500 ease-in-out hover:scale-105 shadow-md overflow-hidden hover:shadow-lg">
+        <img src="https://www.computersciencedegreehub.com/wp-content/uploads/2022/08/HTML.jpg" 
+             alt="HTML Course" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-slate-900">HTML Basics</h3>
+          <p class="text-sm text-slate-600 mb-3">Learn the structure of web pages with HTML.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sky-500 text-sm font-medium">Beginner</span>
+            <button class="bg-sky-400 hover:bg-sky-500 text-white px-3 py-1 rounded-lg text-sm">Enroll</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div id="ror" class="bg-white  rounded-lg transition-all duration-500 ease-in-out hover:scale-105 shadow-md overflow-hidden hover:shadow-lg">
+        <img src="https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg" 
+             alt="CSS Course" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-slate-900">CSS Mastery</h3>
+          <p class="text-sm text-slate-600 mb-3">Style and design modern web pages with CSS.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sky-500 text-sm font-medium">Intermediate</span>
+            <button class="bg-sky-400 hover:bg-sky-500 text-white px-3 py-1 rounded-lg text-sm">Enroll</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div id="ror" class="bg-white  rounded-lg transition-all duration-500 ease-in-out hover:scale-105 shadow-md overflow-hidden hover:shadow-lg">
+        <img src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1644309392998-Sorting%20image-25.png" 
+             alt="JS Course" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-slate-900">JavaScript Essentials</h3>
+          <p class="text-sm text-slate-600 mb-3">Add interactivity to your websites with JS.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sky-500 text-sm font-medium">Beginner</span>
+            <button class="bg-sky-400 hover:bg-sky-500 text-white px-3 py-1 rounded-lg text-sm">Enroll</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div id="ror" class="bg-white  rounded-lg transition-all duration-500 ease-in-out hover:scale-105 shadow-md overflow-hidden hover:shadow-lg">
+        <img src="https://static.vecteezy.com/system/resources/previews/005/442/693/non_2x/data-science-analytics-internet-and-technology-concept-concept-photo.jpg" 
+             alt="Data Science Course" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-slate-900">Data Science</h3>
+          <p class="text-sm text-slate-600 mb-3">Analyze and visualize data with Python & ML.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sky-500 text-sm font-medium">Advanced</span>
+            <button class="bg-sky-400 hover:bg-sky-500 text-white px-3 py-1 rounded-lg text-sm">Enroll</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 5 -->
+      <div id="ror" class="bg-white  rounded-lg transition-all duration-500 ease-in-out hover:scale-105 shadow-md overflow-hidden hover:shadow-lg">
+        <img src="https://www.patterns.dev/img/reactjs/react-logo@3x.svg" 
+             alt="React Course" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-slate-900">React Development</h3>
+          <p class="text-sm text-slate-600 mb-3">Build fast, dynamic web apps using React.js.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sky-500 text-sm font-medium">Intermediate</span>
+            <button class="bg-sky-400 hover:bg-sky-500 text-white px-3 py-1 rounded-lg text-sm">Enroll</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 6 -->
+      <div id="ror" class="bg-white  rounded-lg transition-all duration-500 ease-in-out hover:scale-105 shadow-md overflow-hidden hover:shadow-lg">
+        <img src="https://www.shutterstock.com/image-photo/glowing-digital-lock-surrounded-by-600nw-2517566697.jpg" 
+             alt="Cyber Security Course" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-slate-900">Cyber Security Basics</h3>
+          <p class="text-sm text-slate-600 mb-3">Learn how to secure applications and networks.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sky-500 text-sm font-medium">Beginner</span>
+            <button class="bg-sky-400 hover:bg-sky-500 text-white px-3 py-1 rounded-lg text-sm">Enroll</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</section>
+
+
+<!-- Progress Section -->
+<section class="p-6 sm:ml-64 mt-10 flex justify-center" id="progress">
+  <section class="my-10 px-6 w-full max-w-6xl">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center">Your Progress</h2>
+
+    <div class="space-y-6">
+
+      <!-- Progress Card -->
+      <div class="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-semibold text-slate-900">HTML Basics</h3>
+          <span class="text-sm text-slate-600">60% Complete</span>
+        </div>
+        <div class="w-full bg-slate-200 rounded-full h-3">
+          <div class="bg-sky-400 h-3 rounded-full" style="width: 60%;"></div>
+        </div>
+      </div>
+
+      <!-- Progress Card -->
+      <div class="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-semibold text-slate-900">CSS Mastery</h3>
+          <span class="text-sm text-slate-600">40% Complete</span>
+        </div>
+        <div class="w-full bg-slate-200 rounded-full h-3">
+          <div class="bg-green-400 h-3 rounded-full" style="width: 40%;"></div>
+        </div>
+      </div>
+
+      <!-- Progress Card -->
+      <div class="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-semibold text-slate-900">JavaScript Essentials</h3>
+          <span class="text-sm text-slate-600">20% Complete</span>
+        </div>
+        <div class="w-full bg-slate-200 rounded-full h-3">
+          <div class="bg-yellow-400 h-3 rounded-full" style="width: 20%;"></div>
+        </div>
+      </div>
+
+      <!-- Progress Card -->
+      <div class="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-semibold text-slate-900">Data Science</h3>
+          <span class="text-sm text-slate-600">75% Complete</span>
+        </div>
+        <div class="w-full bg-slate-200 rounded-full h-3">
+          <div class="bg-purple-500 h-3 rounded-full" style="width: 75%;"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</section>
+
+
+<!-- Report Section -->
+<section class="p-6 sm:ml-64 mt-10 flex justify-center " id="report">
+  <section class="my-10 px-6 w-full max-w-6xl">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center"> Learning Report</h2>
+
+    
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+      
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold text-slate-900 mb-2">Completed Courses</h3>
+        <p class="text-3xl font-bold text-sky-500">4</p>
+      </div>
+
+     
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold text-slate-900 mb-2">In Progress</h3>
+        <p class="text-3xl font-bold text-green-500">2</p>
+      </div>
+
+      
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold text-slate-900 mb-2">Total Hours</h3>
+        <p class="text-3xl font-bold text-purple-500">56</p>
+      </div>
+
+      
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold text-slate-900 mb-2">Certificates</h3>
+        <p class="text-3xl font-bold text-yellow-500">3</p>
+      </div>
+
+    </div>
+
+   
+  </section>
+</section>
+
+
+    <!-- motivation -->
+    <main class="p-6 sm:ml-64 mt-20">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+
+            <div>
+                <img class=" w-full h-auto rounded-lg  hover:shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+                    src="https://athenify.io/_nuxt/img/hero-min.482f8eb.png" alt="Dashboard Preview">
+            </div>
+
+
+
+            <div>
+                <h1 class="text-3xl font-bold mb-4">Free Trial</h1>
+                <p class="text-gray-700 dark:text-gray-300">
+                    Kickstart your most productive semester! Start your 14-day free trial of Athenify today
+                </p>
+                <br>
+                <ul>
+                    <li><i class="fas fa-check-circle fa-lg"></i>Effortless tracking of all your study times
+ </li><br>
+ <li><i class="fas fa-check-circle fa-lg"></i>Stay motivated with streaks, medals, and badges
+ </li><br>
+ <li><i class="fas fa-check-circle fa-lg"></i>Analyze your study habits with graphs and deep dive tools</li>
+                </ul>
+                <br><br>
+                <button
+                    class="hover:shadow-[0_0_30px_rgba(37,99,235,0.7)] rounded-full w-64 h-10 bg-black text-white text-xl text-center font-bold transition-transform duration-300 ease-in-out hover:scale-105">Start
+                    Now</button>
+            </div>
+            
+        </section>
+    </main>
+
+
+
+    <!-- form -->
+     <main class="p-6 sm:ml-64 mt-20">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+                <h1 class="text-3xl font-bold mb-4">Let's Connect</h1>
+                
+                <br>
+                
+
+<form class="max-w-sm mx-auto">
+    <div class="mb-5">
+    <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+    <input type="text"  class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" required />
+  </div>
+  <div class="mb-5">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+    <input type="email" id="email" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" placeholder="name@gmail.com" required />
+  </div>
+  
+  <div class="mb-5">
+    <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number</label>
+        <input type="text"  class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" required />
+
+  </div>
+  <div class="flex items-start mb-5">
+    <div class="flex items-center h-5">
+      <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+    </div>
+    <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+  </div>
+<button
+                    class="hover:shadow-[0_0_30px_rgba(37,99,235,0.7)] rounded-full w-64 h-10 bg-black text-white text-xl text-center font-bold transition-transform duration-300 ease-in-out hover:scale-105">Submit</button></form>
+
+            </div>
+            <div>
+                <img class=" w-full h-auto rounded-lg  hover:shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+                    src="https://athenify.io/_nuxt/img/hero-min.482f8eb.png" alt="Dashboard Preview">
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
+
+
+
+    <!-- foter -->
+
+ 
+    <footer class="bg-white dark:bg-gray-900 p-6 sm:ml-64 mt-20">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+              <a href="https://flowbite.com/" class="flex items-center">
+                  <img src="https://static.vecteezy.com/system/resources/previews/050/738/813/non_2x/education-logo-design-with-book-globe-badge-with-leaves-icon-mascot-logo-design-symbol-for-language-school-vector.jpg" class="h-8 me-3" alt="FlowBite Logo" />
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TrackEd</span>
+              </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Product</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/" class="hover:underline">Fields of study</a>
+                      </li>
+                      <li>
+                          <a href="https://tailwindcss.com/" class="hover:underline">Features</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Pricing</a>
+                      </li>
+                      <li>
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">FAQ</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="#" class="hover:underline">Privacy Policy</a>
+                      </li>
+                      <li>
+                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">TrackEd™</a>. All Rights Reserved.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                  <span class="sr-only">Facebook page</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                    </svg>
+                  <span class="sr-only">Discord community</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Twitter page</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Dribbble account</span>
+              </a>
+          </div>
+      </div>
+    </div>
+</footer>
+ 
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <style>
+        #ror:hover {
+            background: linear-gradient(to top left, #33ccff 0%, #ff99cc, #fff)
+        }
+    </style>
+</body>
+
+</html>
